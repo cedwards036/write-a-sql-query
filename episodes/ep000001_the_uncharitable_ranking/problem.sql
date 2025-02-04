@@ -43,3 +43,26 @@ INSERT INTO grades (student_name, gpa) (
             ('Valerie May', 2.0)
     )
 );
+
+
+/*
+EXPECTED RESULTS:
+
+|student_name      |gpa|student_rank|
+|------------------|---|------------|
+| Kyle Roth        |3.9|           1|
+| Jonathan Higgins |3.8|           3|
+| Karen Hill       |3.8|           3|
+| Kimberly Peterson|3.7|           4|
+| Casey Hammond    |3.5|           5|
+| Jonathan Griffin |3.4|           6|
+| Brittany Crawford|2.9|           9|
+| Ernest Hogan     |2.9|           9|
+| Rita Graham      |2.9|           9|
+| Mary Mcdaniel    |2.5|          10|
+| Carla Porter     |2.4|          11|
+| Joseph Patterson |2.3|          14|
+| Michael Robertson|2.3|          14|
+| Sierra Jordan    |2.3|          14|
+| Valerie May      |2.0|          15|
+*/
