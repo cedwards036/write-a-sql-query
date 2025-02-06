@@ -39,3 +39,13 @@ SELECT
 FROM fib
 ORDER BY fib_index;
 ```
+
+
+Fun sidebar, Binet's formula is a closed-form solution:
+```sql
+WITH n(val) AS (
+	VALUES (6)
+)
+SELECT 1/SQRT(5) * (((1 + SQRT(5))/2)^n.val - ((1 - SQRT(5))/2)^n.val)
+FROM n;
+```
