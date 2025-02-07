@@ -9,9 +9,9 @@ the rest of the sequence follows like so:
 More formally, this standard version of the sequence can be defined by the following
 equations:
 
-F_0 = 0
-F_1 = 1
-F_n = F_n-1 + F_n-2, where n > 1
+F_1 = 0
+F_2 = 1
+F_n = F_n-1 + F_n-2, where n > 2
 
 Write a SQL query that generates the first N fibonacci numbers, ordered from
 smallest to largest.
@@ -25,23 +25,23 @@ number to 15 should make the query return the first 15 Fibonacci numbers.
 
 EXPECTED RESULT WHEN N=15:
 
-|fib_number|
-------------
-|0         |
-|1         |
-|1         |
-|2         |
-|3         |
-|5         |
-|8         |
-|13        |
-|21        |
-|34        |
-|55        |
-|89        |
-|144       |
-|233       |
-|377       |
+|n    |
+-------
+|0    |
+|1    |
+|1    |
+|2    |
+|3    |
+|5    |
+|8    |
+|13   |
+|21   |
+|34   |
+|55   |
+|89   |
+|144  |
+|233  |
+|377  |
 
 */
 
