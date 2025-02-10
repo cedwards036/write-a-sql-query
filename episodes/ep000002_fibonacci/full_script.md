@@ -193,7 +193,7 @@ or 0-indexing. For simplicity's sake let's go with 1-indexing for now, such that
 we can say "the *first* Fibonacci number is 0, the *second* number is 1, and so on".
 
 So, we just add an index column to the CTE definition here. Now, for the base case,
-since we are 0 `prev_n` and 1 `n`, it seems fair to tie the base case index to the
+since we are using 0 for `prev_n` and 1 for `n`, it seems fair to tie the base case index to the
 1 rather than the 0. And since 1 is the second number in the sequence, our base
 case index in this context is 2.
 
