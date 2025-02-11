@@ -15,7 +15,9 @@ pause the video now, and come back later for a solution walkthrough, coming righ
 
 
 ## Solution Walkthrough
-TODO
+TODO write the rest of the script
+
+TODO https://stackoverflow.com/a/14113580 < see how you can generate the date spine
 
 ```sql
 --using date spine and multiple filtered CTEs
