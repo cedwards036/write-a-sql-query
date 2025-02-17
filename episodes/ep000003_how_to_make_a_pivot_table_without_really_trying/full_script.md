@@ -47,7 +47,7 @@ applicable, I'm going to show you a way to produce a pivoted structure using
 standard SQL, without using any special database-specific functionality.
 
 ### CASE statements
-Ok, let's start by running simple `SELECT *` from the product sales table to
+Ok, let's start by taking a look at the product sales table to
 remind ourselves what we are dealing with. We have a sale_date column which we
 want in the final output, so I'll just put that in our SELECT statement here.
 Then we have these two columns for product_type and quantity. In the final output,
