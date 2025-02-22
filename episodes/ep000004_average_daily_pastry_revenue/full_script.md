@@ -92,7 +92,7 @@ a simple `GROUP BY` statement, and voila!
 SELECT
 	p.product_name,
 	s.transaction_timestamp::date AS transaction_date,
-	SUM(s.product_quantity * p.product_price_usd) AS revenue_usd
+	SUM(s.product_quantity * p.product_price_usd) AS daily_revenue_usd
 FROM sales s
 JOIN product p
 	ON s.product_id = p.product_id
