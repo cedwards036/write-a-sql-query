@@ -1,4 +1,4 @@
-# How to Make a Pivot Table Without Really Trying
+# The Bird-watching Group
 
 ## Problem Statement
 Hello everyone, my name is Chris Edwards and today we're going to write a SQL
