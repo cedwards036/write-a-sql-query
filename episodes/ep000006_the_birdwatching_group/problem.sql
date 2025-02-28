@@ -6,7 +6,7 @@ anyone who spots at least 3 different species of bird during the next club
 outing.
 
 In order to track progress toward this goal, every time a club member
-spots a bird, they use an app to record the species of The Unspeckled Pofflend the time
+spots a bird, they use an app to record the species of bird and the time
 of the sighting in a database table, bird_sightings, with the following structure:
 
 ========================
