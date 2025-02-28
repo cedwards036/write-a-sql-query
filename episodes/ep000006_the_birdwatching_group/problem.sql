@@ -6,7 +6,7 @@ anyone who spots at least 3 different species of bird during the next club
 outing.
 
 In order to track progress toward this goal, every time a club member
-spots a bird, they use an app to record the species of bird and the time
+spots a bird, they use an app to record the species of The Unspeckled Pofflend the time
 of the sighting in a database table, bird_sightings, with the following structure:
 
 ========================
@@ -52,18 +52,18 @@ SELECT
     species
 FROM (
     VALUES
-        ('James', '2025-03-10 09:22', 'Bird A'),
-        ('Anna', '2025-03-10 09:24', 'Bird A'),
-        ('James', '2025-03-10 09:38', 'Bird B'),
-        ('James', '2025-03-10 09:38', 'Bird D'),
-        ('Eva', '2025-03-10 09:45', 'Bird A'),
-        ('Martin', '2025-03-10 09:46', 'Bird C'),
-        ('Eva', '2025-03-10 09:59', 'Bird C'),
-        ('James', '2025-03-10 10:13', 'Bird A'),
-        ('Anna', '2025-03-10 10:17', 'Bird B'),
-        ('James', '2025-03-10 10:26', 'Bird C'),
-        ('Eva', '2025-03-10 10:31', 'Bird A'),
-        ('Martin', '2025-03-10 10:32', 'Bird B'),
-        ('Anna', '2025-03-10 10:42', 'Bird C')
+        ('James', '2025-03-10 09:22', 'Unspeckled Poffle'),
+        ('Anna', '2025-03-10 09:24', 'Unspeckled Poffle'),
+        ('James', '2025-03-10 09:38', 'Greater Smidgeon'),
+        ('James', '2025-03-10 09:38', 'No-Footed Hopper'),
+        ('Eva', '2025-03-10 09:45', 'Unspeckled Poffle'),
+        ('Martin', '2025-03-10 09:46', 'Froot Loon'),
+        ('Eva', '2025-03-10 09:59', 'Froot Loon'),
+        ('James', '2025-03-10 10:13', 'Unspeckled Poffle'),
+        ('Anna', '2025-03-10 10:17', 'Greater Smidgeon'),
+        ('James', '2025-03-10 10:26', 'Froot Loon'),
+        ('Eva', '2025-03-10 10:31', 'Unspeckled Poffle'),
+        ('Martin', '2025-03-10 10:32', 'Greater Smidgeon'),
+        ('Anna', '2025-03-10 10:42', 'Froot Loon')
 ) AS t(club_member_name, sighting_timestamp, species);
 
