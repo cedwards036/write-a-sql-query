@@ -22,7 +22,7 @@ continuous use from March 17th through March 25. And therefore, all of these
 bookings get squashed together into the second row in our expected output here.
 
 Moving on to Hall B. The first expected output for for Hall B combines the
-overlapping Voice and Woodwinds bookings from March 13th through March 22nd. And
+overlapping Voice, Woodwinds, and Strings bookings from March 14th through March 22nd. And
 finally, the last two rows in the expected output map 1-to-1 onto the last two
 bookings in Hall B, neither of which overlap with any other bookings in that hall.
 
@@ -33,18 +33,6 @@ local machine. Feel free to pause the video now, and come back later for a solut
 walkthrough, coming right up.
 
 ## Solution Walkthrough
-Ideas for structuring walkthrough:
-1. imagine having a group id, then we could easily write a groupby statement
-   to solve the problem
-2. but how to get the group id?
-3. let's start with a simpler problem, how to tell when a new group has started?
-4. Can we check if the current row's start date is <= the previous row's end date?
-    - No, what if there's an earlier, but longer, event, like the Hall A voice
-      booking
-5. we need to check the current row's start date against the latest end date that
-   has been seen so far (this leads to the ROWS BETWEEN statement)
-6. from there, sum the change indicators to get group number, and then apply
-   our groupby solution from step 1 and voila!
 
 ### Starting from the end with GROUP BY
 Alright, welcome back everyone. We will now take a look at a possible solution
@@ -133,7 +121,7 @@ So it's a little tricker.
 We clearly need to evolve our rule slightly. It isn't enough to consider the end
 date of the immediately preceding booking when deciding if there's an overlap
 or not. We need to consider the end dates of *all* previous bookings. More specifically,
-our new and improved rule should be: if the current booking's start date is on or after
+our new and improved rule should be: if the current booking's start date is strictly after
 the *latest* end date among all previous bookings in the current hall, then the
 current booking is the start of new group. This rule works in every case, including
 our tricky situation in Hall A.
@@ -166,7 +154,8 @@ We can define a custom window frame that encompasses all bookings in the current
 hall *before* the current booking, and then use the MAX() function to get the
 latest end_date from that window. You see here we get the MAX(end_date), we
 partition by hall so that we only consider bookings in the same hall as the
-current booking, and then we set our window to ROWS BETWEEN UNBOUNDED PRECEDING
+current booking, we order by start_date and end_date to ground our window definition
+in the chronological order of the bookings, and then we set our window to ROWS BETWEEN UNBOUNDED PRECEDING
 (meaning from the beginning of the partition) AND 1 PRECEDING (meaning the window
 stops just before the current row). And if we run this, you'll see we now have
 a working indicator column that contains a 1 whenever a row constitutes the start of
