@@ -1,4 +1,4 @@
-# Squashing Recital Reservations
+# Dog bath anti-join
 
 ## Problem Statement
 Hello everyone, my name is Chris Edwards and today we're going to write a SQL
