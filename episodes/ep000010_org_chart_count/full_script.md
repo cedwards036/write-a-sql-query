@@ -134,7 +134,7 @@ the next run of the recursion. Those ids are then treated as manager ids, and jo
 are doing an INNER JOIN, the recurrence query here only returns records when there
 are indeed direct reports to be found. And therefore the whole recursion ends once
 we have exhausted the entire org chart, and there are no more employee-manager
-relationships yet to be found.
+relationships yet to be traversed.
 
 ### Finishing the solution
 So, that's how this query works in a nutshell. We are not quite done with the solution,
